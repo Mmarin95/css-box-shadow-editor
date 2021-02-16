@@ -60,7 +60,7 @@ input:not([type="color"]) {
 }
 
 input:not([type="color"]):focus {
-  border: 2px solid black;
+  border: 1px solid black;
 }
 
 input[type="color"] {
@@ -74,4 +74,18 @@ input[type="color"] {
 .divider {
   margin: 1rem -1rem 0.4rem -1rem;
   border-bottom: 1px solid darkblue;
+}
+
+.reset-button {
+  width: 50%;
+  border-radius: 0.3em;
+  background-color: rgb(77, 192, 238);
+  border: none;
+  cursor: pointer;
+  outline: none;
+}
+
+.reset-button:hover {
+  transform: translateY(-1px);
+  border: 1px solid black;
 }
