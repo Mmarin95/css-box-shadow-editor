@@ -76,8 +76,13 @@ input[type="color"] {
   border-bottom: 1px solid darkblue;
 }
 
+.buttons {
+  display: flex;
+}
+
+.copy-button,
 .reset-button {
-  width: 50%;
+  /* width: 50%; */
   border-radius: 0.3em;
   background-color: rgb(77, 192, 238);
   border: none;
@@ -85,6 +90,7 @@ input[type="color"] {
   outline: none;
 }
 
+.copy-button,
 .reset-button:hover {
   transform: translateY(-1px);
   border: 1px solid black;
