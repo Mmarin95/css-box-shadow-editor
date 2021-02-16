@@ -5,6 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>CSS Box Shadow Editor</title>
+
+    <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
     <div class="box-container">
@@ -12,32 +14,43 @@
     </div>
     <div class="sidebar">
       <label for="x-position">X</label>
-      <input type="number" name="x-position" id="x-position" value="" />
+      <input type="number" name="x-position" id="x-position" value="3" />
 
       <label for="y-position">Y</label>
-      <input type="number" name="y-position" id="y-position" value="" />
+      <input type="number" name="y-position" id="y-position" value="3" />
 
       <label for="blur">Blur</label>
-      <input type="number" name="blur" id="blur" value="" />
+      <input type="number" name="blur" id="blur" value="5" />
 
       <label for="spread">Spread</label>
-      <input type="number" name="spread" id="spread" value="" />
+      <input type="number" name="spread" id="spread" value="6" />
 
       <label for="shadow-color">Shadow Color</label>
-      <input type="color" name="shadow-color" id="shadow-color" value="" />
+      <input
+        type="color"
+        name="shadow-color"
+        id="shadow-color"
+        value="#000000"
+      />
 
-      <div class="divider">--------------------------</div>
+      <div class="divider"></div>
 
       <label for="box-color">Box Color</label>
-      <input type="color" name="box-color" id="box-color" value="" />
+      <input type="color" name="box-color" id="box-color" value="#ffd700" />
 
       <label for="background-color">Background Color</label>
       <input
         type="color"
         name="background-color"
         id="background-color"
-        value=""
+        value="#ffffff"
       />
+
+      <div class="divider"></div>
+
+      <label for="css-property">CSS Property</label>
+      <input readonly="true" type="text" name="css-property" id="css-property" value="" />
+
     </div>
   </body>
 </html>

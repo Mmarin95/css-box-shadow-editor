@@ -1,0 +1,77 @@
+@import url("https://fonts.googleapis.com/css2?family=Varela+Round&display=swap");
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  font-family: "Varela Round", sans-serif;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+
+  display: flex;
+  min-height: 100vh;
+}
+
+.box-container {
+  flex-grow: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--background-color, #fff);
+}
+
+.box {
+  width: 150px;
+  height: 150px;
+  margin: 20px;
+  border: 1px solid black;
+  background-color: var(--box-color, #ffd700);
+  box-shadow: calc(var(--x-position, 3) * 1px) calc(var(--y-position, 3) * 1px)
+    calc(var(--blur, 5) * 1px) calc(var(--spread, 6) * 1px)
+    var(--shadow-color, #000);
+}
+
+.sidebar {
+  display: flex;
+  flex-direction: column;
+
+  min-width: 150px;
+  width: 20%;
+
+  background-color: skyblue;
+  padding: 0.5rem 1rem;
+}
+
+label {
+  margin: 0.5rem;
+  font-weight: bold;
+}
+
+input:not([type="color"]) {
+  padding: 0.25em 0.5em;
+  font-family: inherit;
+  font-size: inherit;
+  border: 1px solid transparent;
+  border-radius: 0.3em;
+  outline: none;
+}
+
+input:not([type="color"]):focus {
+  border: 2px solid black;
+}
+
+input[type="color"] {
+  width: 100%;
+  border-radius: 0.3em;
+  background-color: white;
+  border: none;
+  cursor: pointer;
+}
+
+.divider {
+  margin: 1rem -1rem 0.4rem -1rem;
+  border-bottom: 1px solid darkblue;
+}
