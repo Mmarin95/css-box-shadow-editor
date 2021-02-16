@@ -98,3 +98,19 @@ input[type="color"] {
   transform: translateY(-1px);
   background-color: rgb(102, 196, 233);
 }
+
+/* Tooltip
+.copy-button {
+  position: relative;
+}
+
+.copy-button::before {
+  content: attr(data-tooltip);
+  position: absolute;
+  background-color: black;
+  padding: 0.5rem;
+  border-radius: 0.5rem;
+
+  top: 50px;
+  right: 50px;
+} */
