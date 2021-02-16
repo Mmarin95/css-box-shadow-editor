@@ -78,20 +78,23 @@ input[type="color"] {
 
 .buttons {
   display: flex;
+  margin-top: 1rem;
+  justify-content: space-evenly;
 }
 
-.copy-button,
-.reset-button {
-  /* width: 50%; */
+.buttons .button {
+  padding: 0.5rem 0.5rem;
+  font-weight: bold;
   border-radius: 0.3em;
-  background-color: rgb(77, 192, 238);
+  background-color: rgb(37, 128, 163);
+  color: white;
   border: none;
   cursor: pointer;
   outline: none;
+  border: 1px solid rgba(0, 0, 0, 0.2);
 }
 
-.copy-button,
-.reset-button:hover {
+.buttons .button:hover {
   transform: translateY(-1px);
-  border: 1px solid black;
+  background-color: rgb(102, 196, 233);
 }
