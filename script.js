@@ -2,17 +2,14 @@ let DEFAULTS = {};
 
 const cssPropertyOutput = document.querySelector("[data-css-property]");
 const buttonCopyText = document.querySelector("[data-copy-text]");
-
 const dataInputsConfiguration = document.querySelectorAll(
   "[data-input-configuration]"
 );
 
-dataInputsConfiguration.forEach((input) => {
-  // const defaultInputValue = {
-  //   [input.name]: input.value,
-  // };
-  // DEFAULTS.push(defaultInputValue);
+buttonCopyText.addEventListener("click", copyText);
+document.querySelector("[data-button-reset]").addEventListener("click", reset);
 
+dataInputsConfiguration.forEach((input) => {
   DEFAULTS = {
     ...DEFAULTS,
     [input.name]: input.value,
@@ -21,8 +18,6 @@ dataInputsConfiguration.forEach((input) => {
   input.addEventListener("input", inputChanged);
   displayCSSRule();
 });
-
-document.querySelector("[data-button-reset]").addEventListener("click", reset);
 
 function inputChanged(e) {
   document.documentElement.style.setProperty(
@@ -55,12 +50,9 @@ function displayCSSRule() {
   });
 
   const rule = `box-shadow: ${rules["x-position"]} ${rules["y-position"]} ${rules["blur"]} ${rules["spread"]} ${rules["shadow-color"]}`;
-
   cssPropertyOutput.value = rule;
 }
 
-
-buttonCopyText.addEventListener("click", copyText);
 function copyText() {
   cssPropertyOutput.select();
   cssPropertyOutput.setSelectionRange(0, 99999);
